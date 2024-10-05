@@ -30,4 +30,10 @@ def expensive_computation(x):
 
 result = expensive_computation(x)
 
+
+df = px.data.gapminder().query("continent == Oceania")
+fig = px.bar(df, x='year', y='pop')
+
+
+
 st.pyplot(fig)
