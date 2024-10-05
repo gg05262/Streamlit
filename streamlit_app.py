@@ -23,4 +23,10 @@ ax.set_ylabel(['Y-axis'])
 
 ax.set_title('sin and cos function')
 
+@st.cache
+def expensive_computation(x):
+  return np.sin(x) + np.cos(x)
+
+result = expensive_computation(x)
+
 st.pyplot(fig)
